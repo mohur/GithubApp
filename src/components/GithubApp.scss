@@ -11,7 +11,7 @@
         height: 3rem;
         width: 100%;
         font-size: 16px;
-        margin: 0 0 8px 0;
+        margin: 2em 0 2em 0;
         padding: 0;
         -webkit-box-shadow: none;
         box-shadow: none;
@@ -21,8 +21,15 @@
         transition: border .3s, -webkit-box-shadow .3s;
         transition: box-shadow .3s, border .3s;
         transition: box-shadow .3s, border .3s, -webkit-box-shadow .3s;
+        transition: background-color .7s;
+        
     }
 
+    input:hover {
+        background-color: #DDDDDD ;
+        color: black;
+    }
+    
     div {
         padding-top: 5px;
     }
@@ -30,5 +37,6 @@
     p {
         padding-top: 0px;
         font-size: 14px;
+        color: white;
     }
 }

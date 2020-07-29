@@ -1,13 +1,11 @@
 import React from 'react';
 import { Chart } from "react-google-charts";
+import '../App.css';
 
-const MyPieChart = ({languages, userfullname}) => {
-
-    const title = `${userfullname}'s preferred Languages`;
+const MyPieChart = ({languages, setUserFullName}) => {
 
     return(
-        <div>
-
+        <div className="chart">
             <Chart
                 width={'600px'}
                 height={'400px'}
@@ -15,7 +13,14 @@ const MyPieChart = ({languages, userfullname}) => {
                 loader={<div>Loading Chart</div>}
                 data={languages}
                 options={{
-                    title: title,
+                    backgroundColor: { fill:'transparent' },
+                    titleTextStyle: {color: 'white'},
+                    fontSize:'15',
+                    legend: {
+                        textStyle: { color: 'white' },
+                        position: 'bottom', 
+                    },
+
                 }}
             />
 
